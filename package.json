@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "^0.5.2-next.5",
+    "@prisma/client": "^3.0.2",
     "@react-three/drei": "^7.8.4",
     "@react-three/fiber": "^7.0.7",
     "@react-three/postprocessing": "^2.0.5",
     "next": "11.1.2",
-    "next-auth": "^3.29.0",
+    "next-auth": "^4.0.0-beta.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "styled-components": "^5.3.1",
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "prisma": "^3.0.2"
   }
 }
