@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Generative from '../components/Generative'
 import Hero from '../components/hero'
+import AuthButton from "../components/auth/AuthButton"
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 			</Head>
 
 			<main>
+        <AuthButton/>
 				<Hero />
 				<Generative />
 			</main>

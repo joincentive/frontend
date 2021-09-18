@@ -1,6 +1,5 @@
 import React, { useMemo, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 import { OrbitControls } from '@react-three/drei'
 import './Material'
 import styled from 'styled-components'
