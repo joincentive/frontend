@@ -1,4 +1,5 @@
 import React from 'react'
+import AuthButton from './auth/AuthButton'
 
 const Nav = () => {
 	return (
@@ -8,7 +9,7 @@ const Nav = () => {
 				<div>
 					<p>About</p>
 					<p>Contact</p>
-					<p>Join with Github</p>
+					<AuthButton />
 				</div>
 			</div>
 			<style jsx>{`
@@ -21,6 +22,7 @@ const Nav = () => {
 				}
 				div > div {
 					width: 35vw;
+					align-items: center;
 				}
 				p {
 					font-family: Overpass;

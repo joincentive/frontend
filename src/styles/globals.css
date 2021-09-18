@@ -5,6 +5,8 @@ body {
 	height: 100%;
 	width: 100%;
 	font-family: Overpass;
+	background: rgb(35, 34, 82);
+	background: linear-gradient(0deg, rgba(35, 34, 82, 1) 35%, rgba(84, 78, 107, 1) 100%);
 }
 
 a {

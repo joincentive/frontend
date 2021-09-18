@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Generative from '../components/Generative'
 import Hero from '../components/hero'
 import LatestProjects from '../components/LatestProjects'
+import Banner from '../components/Banner'
 
 export default function Home() {
 	return (
@@ -14,10 +15,12 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<Generative />
+				<img src="/heroTop.svg" alt="" />
 				<Hero />
-
+				<Banner />
+				{/* <Generative /> */}
 				<LatestProjects />
+				<img src="/heroBottom.svg" alt="" />
 			</main>
 
 			<footer>
