@@ -62,7 +62,6 @@ export default function Generative() {
 		<>
 			<div>
 				<Canvas pixelRatio={[2, 2]} camera={{ position: [0, 0, 2] }}>
-					<color attach="background" args={['black']} />
 					<Particles pointCount={NUM} />
 					<OrbitControls />
 				</Canvas>
@@ -71,13 +70,13 @@ export default function Generative() {
 				margin: 0;
 				height: 100vh;
 				width: 100%;
-				z-index: 2;
 				top: 0px;
 				left: 0px;
 				bottom: 0px;
 				right: 0px;
 				position: absolute;
-				background: yellow;
+				background: rgb(35, 34, 82);
+				background: linear-gradient(0deg, rgba(35, 34, 82, 1) 35%, rgba(84, 78, 107, 1) 100%);
 			`}</style>
 		</>
 	)

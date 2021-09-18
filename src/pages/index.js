@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Generative from '../components/Generative'
 import Hero from '../components/hero'
+import LatestProjects from '../components/LatestProjects'
 
 export default function Home() {
 	return (
@@ -13,8 +14,10 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<Hero />
 				<Generative />
+				<Hero />
+
+				<LatestProjects />
 			</main>
 
 			<footer>
