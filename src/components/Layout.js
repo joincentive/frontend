@@ -7,7 +7,7 @@ const LayoutContainer = styled.div`
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background: #232252;
+	background: linear-gradient(0deg, rgba(35, 34, 82, 1) 35%, rgba(84, 78, 107, 1) 100%);
 `
 
 const Layout = ({ children }) => {

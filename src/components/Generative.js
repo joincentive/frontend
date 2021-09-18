@@ -2,6 +2,7 @@ import React, { useMemo, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import './Material'
+import styled from 'styled-components'
 
 const ROW = 50
 const COL = 50
@@ -17,7 +18,7 @@ function Particles({ pointCount }) {
 				initialCoords.push(x)
 				initialCoords.push(y)
 				initialCoords.push(i)
-				initialSizes.push(Math.random() < 0.03 ? 15 : 6)
+				initialSizes.push(Math.random() < 0.02 ? 7 : 3)
 				i++
 			}
 		}
@@ -30,11 +31,12 @@ function Particles({ pointCount }) {
 	const geom = useRef()
 	useFrame((state) => {
 		geom.current.material.uniforms.time.value = state.clock.getElapsedTime()
+		geom.current.material.verticesNeedUpdate
 		geom.current.geometry.verticesNeedUpdate = true
 	})
 
 	return (
-		<points ref={geom} position={[0, 10, 0]} rotation={[-Math.PI / 4, 0, Math.PI / 6]}>
+		<points ref={geom} position={[0, -5, -8]} rotation={[-Math.PI / 4, 0, Math.PI / 6]}>
 			<bufferGeometry>
 				<bufferAttribute
 					attachObject={['attributes', 'position']}
@@ -56,10 +58,26 @@ function Particles({ pointCount }) {
 
 export default function Generative() {
 	return (
-		<Canvas pixelRatio={[1, 2]} camera={{ position: [0, 0, 2] }}>
-			<color attach="background" args={['#202025']} />
-			<Particles pointCount={NUM} />
-			<OrbitControls />
-		</Canvas>
+		<>
+			<div>
+				<Canvas pixelRatio={[2, 2]} camera={{ position: [0, 0, 2] }}>
+					<color attach="background" args={['black']} />
+					<Particles pointCount={NUM} />
+					<OrbitControls />
+				</Canvas>
+			</div>
+			<style jsx>{`
+				margin: 0;
+				height: 100vh;
+				width: 100%;
+				z-index: 2;
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				right: 0px;
+				position: absolute;
+				background: yellow;
+			`}</style>
+		</>
 	)
 }
