@@ -27,9 +27,9 @@ export default function Home() {
 					</div>
 					<img src="/heroBottom.svg" alt="" id="heroBottom" />
 					<div id="banner">
-						<Button class="btn">Login with Github</Button>
+						<Button className="btn">Login with Github</Button>
 						<span /> <span />
-						<Button class="btn">Learn More</Button>
+						<Button className="btn">Learn More</Button>
 					</div>
 					<div id="projectsDescription">
 						<h1>Latest projects</h1>
@@ -108,11 +108,11 @@ export default function Home() {
 					grid-row: 5;
 				}
 				#projectsDescription {
-					grid-column: 3 / 10;
+					grid-column: 3 / 11;
 					grid-row: 6;
 				}
 				#projectsCards {
-					grid-column: 3 / 10;
+					grid-column: 3 / 11;
 					grid-row: 7;
 				}
 

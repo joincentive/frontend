@@ -10,11 +10,12 @@ const projects = [
 			'A very brief description of the project and what it is about and what you can do to help.',
 	},
 	{
-		name: 'Project name',
-		issuer: ['username1', 'username2'],
-		logo: '/vercel.svg',
+		name: 'BentoML',
+		issuer: ['parano', 'yubozhao'],
+		logo: '/showcase/bento.png',
+		link: 'https://github.com/bentoml/BentoML',
 		description:
-			'A very brief description of the project and what it is about and what you can do to help.',
+			'BentoML is a flexible, high-performance framework for serving, managing, and deploying machine learning models.',
 	},
 	{
 		name: 'Project name',
@@ -25,33 +26,31 @@ const projects = [
 	},
 ]
 
-const Card = ({ name, issuer, logo, description }) => {
+const Card = ({ name, issuer, logo, description, link }) => {
 	return (
 		<>
-			<div id="cardBackground">
+			<div className="cardBackground">
 				<div id="cardBanner">
 					<h2>{name}</h2>
-					<p>{issuer}</p>
+					<p>{issuer.join(", ")}</p>
 				</div>
-				<Image id="cardLogo" src={logo} width={60} height={60} alt="" />
-				{/* <img src="/cardBottom.svg" alt="" class="cardBottom" /> */}
+				<div id="cardLogo">
+					<Image src={logo} layout="fill" alt="" />
+				</div>
 				<p id="cardDescription">{description}</p>
+				<a id="more" href={link}>Learn More</a>
 			</div>
 			<style jsx>
 				{`
-					#cardBackground {
+					.cardBackground {
+						flex: 1 0 0;
+						position: relative;
 						padding: 1rem 0rem 0rem 1rem;
 						display: grid;
 						grid-template-columns: repeat(6, 1fr);
-						grid-template-rows: repeat(3, 1fr);
+						grid-template-rows: repeat(4, 0.5fr);
 						margin: 0rem 1rem 0rem 0rem;
-						background: conic-gradient(
-								from 222.01deg at 50% 50%,
-								#e078c3 0deg,
-								#393a6e 219.37deg,
-								#e078c3 360deg
-							),
-							#38396d;
+						background: conic-gradient(from 180deg at 50% 50%, #38396D66 -37.01deg, #E078C366 135.16deg, #38396D66 322.99deg, #E078C366 495.16deg), #38396D;
 						box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 						border-radius: 10px;
 					}
@@ -63,18 +62,29 @@ const Card = ({ name, issuer, logo, description }) => {
 						background-color: rgba(25, 22, 39, 1);
 						padding: 0.5rem 1rem 0.5rem 1rem;
 					}
+					#cardBanner > p {
+						opacity: 0.6;
+					}
 					#cardLogo {
-						grid-column: 1 / 2;
+						position: relative;
+						border-radius: 50%;
+						margin: 1em;
+						overflow: hidden;
+						grid-column: 1 / 3;
 						grid-row: 1;
 					}
 					#cardDescription {
-						grid-column: 2 / 6;
-						grid-row: 3;
+						padding-right: 1em;
+						grid-column: 1 / -1;
+						grid-row: 2 / 4;
+						word-break: break-word;
 					}
-					#cardBottom {
-						grid-column: 2 / 6;
-						grid-row: 3;
-						position: absolute;
+					#more {
+						padding: 1em;
+						text-align: center;
+						grid-column: 2 / -2;
+						grid-row: 4;
+						text-decoration: underline;
 					}
 				`}
 			</style>
@@ -87,11 +97,12 @@ const Cards = ({}) => {
 		<>
 			<div>
 				{projects.map((g) => {
-					return <Card name={g.name} issuer={g.issuer} logo={g.logo} description={g.description} />
+					return <Card {...g} />
 				})}
 			</div>
 			<style jsx>
 				{`
+					width: 100%;
 					display: flex;
 					flex-direction: row;
 				`}

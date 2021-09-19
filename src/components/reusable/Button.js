@@ -9,11 +9,10 @@ export const Button = (props) => {
 					background-color: #e078c3;
 					display: inline-block;
 					color: white;
-					font-size: 16px;
+					font-size: 14px;
 					font-family: Overpass;
 					padding: 0.5rem 1rem;
 					text-align: center;
-
 					text-decoration: none;
 					border: 0;
 					border-radius: 5px;
@@ -37,13 +36,14 @@ export const OutlineButton = (props) => {
 					background-color: transparent;
 					font-size: 14px;
 					font-family: Overpass;
-					padding: 0.5rem 1rem;
+					padding: calc(0.5rem - 1px) calc(1rem - 1px);
 					text-align: center;
 					text-decoration: none;
-					border: 1px solid white;
 					border-radius: 5px;
 					margin: 0px 3px;
 					cursor: pointer;
+					box-sizing: border-box !important;
+					border: 1px solid white;
 				}
 			`}</style>
 		</>
