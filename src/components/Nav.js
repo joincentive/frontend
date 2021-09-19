@@ -18,11 +18,11 @@ const Nav = () => {
 					display: flex;
 					flex-direction: row;
 					height: 5vh;
-					padding: 1rem 3rem;
+					padding: 2rem 3rem;
 					justify-content: space-between;
 				}
 				div > div {
-					width: 35vw;
+					width: 25vw;
 					align-items: center;
 				}
 				p {

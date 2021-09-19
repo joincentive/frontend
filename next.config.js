@@ -3,5 +3,8 @@ module.exports = {
 	compilerOptions: {
 		baseUrl: './src',
 	},
+	images: {
+		domains: ['avatars.githubusercontent.com'],
+	},
 	optimizeFonts: false,
 }
