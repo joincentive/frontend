@@ -14,7 +14,7 @@ export default function SignIn({ providers }) {
       </Head>
 
       <main>
-        <div>
+        <div className="splash-container">
           <Image src={signInSplash} alt="Login Splash" />
           <div>
             <h2>Join us today</h2>
@@ -28,6 +28,18 @@ export default function SignIn({ providers }) {
           </div>
         </div>
       </main>
+      <style jsx>
+        {`
+            .splash-container {
+              display: flex;
+              flex-direction: row;
+            }
+            
+            .splash-container {
+              flex: 0 0 50%;
+            }
+        `}
+      </style>
     </div>
   )
 }
