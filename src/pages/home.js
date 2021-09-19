@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/reusable/Nav'
+import AuthButton from '../components/auth/AuthButton'
 import { OutlineButton, Button } from '../components/reusable/Button'
 import Cards from '../components/reusable/Card'
 
@@ -27,7 +28,7 @@ export default function Home() {
 					</div>
 					<img src="/heroBottom.svg" alt="" id="heroBottom" />
 					<div id="banner">
-						<Button class="btn">Login with Github</Button>
+						<AuthButton class="btn">Login with Github</AuthButton>
 						<span /> <span />
 						<Button class="btn">Learn More</Button>
 					</div>

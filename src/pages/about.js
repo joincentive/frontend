@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Nav from '../components/reusable/Nav'
 
 export default function Home() {
 	return (
@@ -11,6 +12,7 @@ export default function Home() {
 			</Head>
 
 			<main>
+				<Nav />
 				<div id="about">
 					<div>
 						<h1>What does Centive do?</h1>
@@ -25,7 +27,7 @@ export default function Home() {
 					</div>
 					<Image src="/ship.png" alt="" width="550" height="550" />
 				</div>
-				<Image id="blob" src="/blob.png" alt="" width="1720" height="300" />
+				<Image id="blob" src="/blob.png" alt="" width="1920" height="300" />
 			</main>
 			<style jsx>
 				{`
@@ -37,14 +39,14 @@ export default function Home() {
 						padding: 0rem 4rem;
 						overflow-y: hidden;
 					}
-			
+
 					div > div {
 						width: 60vw;
-						padding: 3rem ;	
+						padding: 3rem;
 					}
 
-					#blob{
-						width: 100%
+					#blob {
+						width: 100%;
 					}
 				`}
 			</style>
