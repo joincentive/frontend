@@ -3,16 +3,15 @@ import GithubProvider from 'next-auth/providers/github'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { PrismaClient } from '@prisma/client'
 
-
 const prisma = new PrismaClient()
 
 export default NextAuth({
-  adapter: PrismaAdapter(prisma),
-  providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
-      scope: 'write:repo_hook,read:user',
-    }),
-  ],
+	adapter: PrismaAdapter(prisma),
+	providers: [
+		GithubProvider({
+			clientId: process.env.GITHUB_ID,
+			clientSecret: process.env.GITHUB_SECRET,
+			scope: 'write:repo_hook,read:user',
+		}),
+	],
 })

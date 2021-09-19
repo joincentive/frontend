@@ -8,7 +8,13 @@ const Banner = () => {
 				<Button>Learn More</Button>
 				<Button>Login with Github</Button>
 			</div>
-			<style jsx>{``}</style>
+			<style jsx>{`
+				div > div {
+					background-color: rgba(25, 22, 39, 0.9);
+					padding: 1.5rem;
+					width: 45vw;
+				}
+			`}</style>
 		</div>
 	)
 }

@@ -3,15 +3,13 @@ import React from 'react'
 const Hero = () => {
 	return (
 		<div>
-			<div>
-				<h1>Centive lets community compensate creators</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh eu risus ut amet at montes,
-					faucibus sit. Non massa lacus, fames in quis malesuada in vitae convallis. Vestibulum et
-					tincidunt faucibus maecenas turpis egestas posuere sed. Ut porttitor cursus est sit
-					sagittis donec adipiscing neque a.
-				</p>
-			</div>
+			<h1>Centive lets community compensate creators</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh eu risus ut amet at montes,
+				faucibus sit. Non massa lacus, fames in quis malesuada in vitae convallis. Vestibulum et
+				tincidunt faucibus maecenas turpis egestas posuere sed. Ut porttitor cursus est sit sagittis
+				donec adipiscing neque a.
+			</p>
 
 			<style jsx>{`
 				div {

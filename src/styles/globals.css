@@ -4,16 +4,39 @@ body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
+	overflow-y: scroll;
 	font-family: Overpass;
 	background: rgb(35, 34, 82);
 	background: linear-gradient(0deg, rgba(35, 34, 82, 1) 35%, rgba(84, 78, 107, 1) 100%);
 }
 
 a {
-	color: inherit;
+	color: white;
 	text-decoration: none;
 }
 
 * {
 	box-sizing: border-box;
+}
+
+h1 {
+	color: white;
+	font-size: 36px;
+	font-family: Righteous;
+	position: relative;
+	z-index: 10;
+}
+h2 {
+	color: white;
+	font-size: 18px;
+	font-family: Righteous;
+	position: relative;
+	z-index: 10;
+}
+p {
+	color: white;
+	position: relative;
+	font-size: 16px;
+	font-family: Overpass;
+	z-index: 10;
 }

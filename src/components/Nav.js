@@ -1,5 +1,6 @@
 import React from 'react'
 import AuthButton from './auth/AuthButton'
+import Link from 'next/link'
 
 const Nav = () => {
 	return (
@@ -7,8 +8,8 @@ const Nav = () => {
 			<div>
 				<h1>Centive</h1>
 				<div>
-					<p>About</p>
-					<p>Contact</p>
+					<Link href="/about">About</Link>
+					<Link href="/about">Contact</Link>
 					<AuthButton />
 				</div>
 			</div>
@@ -25,15 +26,11 @@ const Nav = () => {
 					align-items: center;
 				}
 				p {
-					font-family: Overpass;
 					position: relative;
 					z-index: 3;
-					color: white;
 				}
 				,
 				h1 {
-					color: white;
-					font-family: Righteous;
 					z-index: 10;
 				}
 			`}</style>
