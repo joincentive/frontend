@@ -3,11 +3,12 @@ import Image from 'next/image'
 
 const projects = [
 	{
-		name: 'Project name',
-		issuer: ['username1', 'username2'],
-		logo: '/vercel.svg',
+		name: 'HackClub',
+		issuer: ['zrl'],
+		link: 'https://hackclub.com/',
+		logo: '/showcase/hackclub.png',
 		description:
-			'A very brief description of the project and what it is about and what you can do to help.',
+			'Clubs discovering the joy of code. Hack Club is a nonprofit network of high school coding clubs and makers around the world.',
 	},
 	{
 		name: 'BentoML',
@@ -18,11 +19,11 @@ const projects = [
 			'BentoML is a flexible, high-performance framework for serving, managing, and deploying machine learning models.',
 	},
 	{
-		name: 'Project name',
-		issuer: ['username1', 'username2'],
-		logo: '/vercel.svg',
+		name: 'Exercism',
+		issuer: ['KYTRINYX', 'iHiD'],
+		logo: '/showcase/exercism.png',
 		description:
-			'A very brief description of the project and what it is about and what you can do to help.',
+			'Develop fluency in over 55 programming languages with our unique blend of learning, practice and mentoring. Exercism is fun, effective and 100% free, forever.',
 	},
 ]
 
@@ -32,7 +33,7 @@ const Card = ({ name, issuer, logo, description, link }) => {
 			<div className="cardBackground">
 				<div id="cardBanner">
 					<h2>{name}</h2>
-					<p>{issuer.join(", ")}</p>
+					<p>{issuer.map(x => `@${x}`).join(", ")}</p>
 				</div>
 				<div id="cardLogo">
 					<Image src={logo} layout="fill" alt="" />
