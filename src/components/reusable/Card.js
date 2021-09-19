@@ -27,10 +27,34 @@ const projects = [
 	},
 ]
 
+export const CardBackground = (props) => {
+	return <>
+		<div className="cardBackground">
+			{props.children}
+		</div>
+		<style jsx>
+			{`
+				.cardBackground {
+					flex: 1 0 0;
+					position: relative;
+					padding: 1rem 0rem 0rem 1rem;
+					display: grid;
+					grid-template-columns: repeat(6, 1fr);
+					grid-template-rows: repeat(4, 0.5fr);
+					margin: 0rem 1rem 0rem 0rem;
+					background: conic-gradient(from 180deg at 50% 50%, #38396D66 -37.01deg, #E078C366 135.16deg, #38396D66 322.99deg, #E078C366 495.16deg), #38396D;
+					box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+					border-radius: 10px;
+				}
+			`}
+		</style>
+	</>
+}
+
 const Card = ({ name, issuer, logo, description, link }) => {
 	return (
 		<>
-			<div className="cardBackground">
+			<CardBackground>
 				<div id="cardBanner">
 					<h2>{name}</h2>
 					<p>{issuer.map(x => `@${x}`).join(", ")}</p>
@@ -40,22 +64,9 @@ const Card = ({ name, issuer, logo, description, link }) => {
 				</div>
 				<p id="cardDescription">{description}</p>
 				<a id="more" href={link}>Learn More</a>
-			</div>
+			</CardBackground>
 			<style jsx>
 				{`
-					.cardBackground {
-						flex: 1 0 0;
-						position: relative;
-						padding: 1rem 0rem 0rem 1rem;
-						display: grid;
-						grid-template-columns: repeat(6, 1fr);
-						grid-template-rows: repeat(4, 0.5fr);
-						margin: 0rem 1rem 0rem 0rem;
-						background: conic-gradient(from 180deg at 50% 50%, #38396D66 -37.01deg, #E078C366 135.16deg, #38396D66 322.99deg, #E078C366 495.16deg), #38396D;
-						box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-						border-radius: 10px;
-					}
-
 					#cardBanner {
 						grid-column: 3 / -1;
 						grid-row: 1;
