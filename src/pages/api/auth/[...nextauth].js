@@ -14,4 +14,14 @@ export default NextAuth({
 			scope: 'write:repo_hook,read:user',
 		}),
 	],
+	callbacks: {
+		redirect() {
+			return '/dashboard'
+		},
+	},
+	pages: {
+		signIn: '/auth/gh',
+		signOut: '/',
+		newUser: '/onboarding'
+	}
 })

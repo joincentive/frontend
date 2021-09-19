@@ -10,7 +10,7 @@ export default function Home() {
 			<Head>
 				<title>Centive | Home</title>
 				<meta name="description" content="Open source" />
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/ship.png" />
 			</Head>
 
 			<Link href="/home" id="main">

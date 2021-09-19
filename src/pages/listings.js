@@ -87,7 +87,7 @@ const projectsList = [
 
 const listingsMap = () => {
 	return projectsList.map((item) => (
-		<div onClick={(item) => useState(item.id)}>
+		<div>
 			<span />
 			<div>
 				<Image src={item.id.image} alt={item.id.name} width={255} height={255} />
@@ -110,8 +110,6 @@ const listingsMap = () => {
 	))
 }
 const listings = () => {
-	console.log(listingsMap)
-	const [listing, setListing] = useState()
 	return (
 		<div id="listings">
 			<div id="title">
