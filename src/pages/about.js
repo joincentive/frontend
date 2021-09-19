@@ -1,9 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Generative from '../components/Generative'
-import Hero from '../components/hero'
-import LatestProjects from '../components/LatestProjects'
-import Banner from '../components/Banner'
 
 export default function Home() {
 	return (
