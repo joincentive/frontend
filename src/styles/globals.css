@@ -6,8 +6,8 @@ body {
 	width: 100%;
 	overflow-y: scroll;
 	font-family: Overpass;
-	background: rgb(35, 34, 82);
-	background: linear-gradient(0deg, rgba(35, 34, 82, 1) 35%, rgba(84, 78, 107, 1) 100%);
+	background: linear-gradient(180deg, #544e6b 0%, #242a50 74.78%),
+		linear-gradient(0deg, #29284d, #29284d);
 }
 
 a {
@@ -33,6 +33,16 @@ h2 {
 	position: relative;
 	z-index: 10;
 }
+
+h3 {
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: Overpass;
+	position: relative;
+	z-index: 10;
+}
+
 p {
 	color: white;
 	position: relative;

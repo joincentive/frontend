@@ -2,8 +2,8 @@ import * as THREE from 'three'
 import { useMemo, useState, useRef } from 'react'
 import { createPortal, useFrame } from '@react-three/fiber'
 import { useFBO } from '@react-three/drei'
-import './shaders/simulationMaterial'
-import './shaders/dofPointsMaterial'
+import '../shaders/simulationMaterial'
+import '../shaders/dofPointsMaterial'
 
 export function Particles({ speed, fov, aperture, focus, curl, size = 400, ...props }) {
   const [num, setNum] = useState(`0`)

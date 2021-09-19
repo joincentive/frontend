@@ -111,7 +111,7 @@ const listingsMap = () => {
 }
 const listings = () => {
 	return (
-		<>
+		<div id="listings">
 			<div id="title">
 				<h1>What type of projects are you looking for?</h1>
 				<p>
@@ -128,7 +128,7 @@ const listings = () => {
 					}
 				`}
 			</style>
-		</>
+		</div>
 	)
 }
 

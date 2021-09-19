@@ -1,12 +1,14 @@
 import React from 'react'
-import AuthButton from './auth/AuthButton'
+import AuthButton from '../auth/AuthButton'
 import Link from 'next/link'
 
 const Nav = () => {
 	return (
 		<>
 			<div>
-				<h1>Centive</h1>
+				<Link href="/">
+					<h1>Centive</h1>
+				</Link>
 				<div>
 					<Link href="/about">About</Link>
 					<Link href="/about">Contact</Link>
@@ -22,7 +24,7 @@ const Nav = () => {
 					justify-content: space-between;
 				}
 				div > div {
-					width: 35vw;
+					width: 500px;
 					align-items: center;
 				}
 				p {
