@@ -5,16 +5,22 @@ import {useSession} from "next-auth/react";
 import {useRouter} from "next/router";
 import {useEffect} from 'react'
 import Nav from "../components/reusable/Nav";
+import Loader from "../components/reusable/Loader";
+
 
 export default function Dashboard() {
   const {data: session, status} = useSession()
   const router = useRouter()
 
   useEffect(() => {
-    if (status === "unauthenticated" || session === null) {
+    if (status === "unauthenticated") {
       router.push('/')
     }
   }, [session, status])
+
+	if (!session) {
+		return <Loader/>
+	}
 
 	return (
 		<>

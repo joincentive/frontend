@@ -18,6 +18,19 @@ export default NextAuth({
 		redirect() {
 			return '/dashboard'
 		},
+		async session({ session}) {
+			// Send properties to the client, like an access_token from a provider.
+			const user = await prisma.user.findUnique({
+				where: {
+					email: session.user.email,
+				},
+				include: {
+					accounts: true,
+				},
+			})
+			session.accessToken = user.accounts[0].access_token
+			return session
+		}
 	},
 	pages: {
 		signIn: '/auth/gh',

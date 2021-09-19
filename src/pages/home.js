@@ -28,8 +28,6 @@ export default function Home() {
 					</div>
 					<img src="/heroBottom.svg" alt="" id="heroBottom" />
 					<div id="banner">
-						<AuthButton class="btn">Login with Github</AuthButton>
-						<span /> <span />
 						<Button className="btn">Learn More</Button>
 					</div>
 					<div id="projectsDescription">
