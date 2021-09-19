@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = ({ children }) => {
+const Button = (props) => {
 	return (
 		<>
-			<button>{children}</button>
+			<button {...props}>{props.children}</button>
 			<style jsx>{`
 				button {
 					background-color: #e078c3;

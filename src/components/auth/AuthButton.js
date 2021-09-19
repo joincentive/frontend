@@ -6,14 +6,10 @@ export default function AuthButton() {
 	if (session) {
 		return (
 			<>
-				{session.user.name} <br />
+				<p>{session.user.name}</p>
 				<Button onClick={() => signOut()}>Sign out</Button>
 			</>
 		)
 	}
-	return (
-		<>
-			<Button onClick={() => signIn()}>Sign in with Github</Button>
-		</>
-	)
+	return <Button onClick={() => signIn()}>Sign in</Button>
 }
