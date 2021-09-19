@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Nav from '../components/reusable/Nav'
-import AuthButton from '../components/auth/AuthButton'
 import { OutlineButton, Button } from '../components/reusable/Button'
 import Cards from '../components/reusable/Card'
+import Portal from "../components/index/Portal";
 
 export default function Home() {
 	return (
@@ -15,6 +15,9 @@ export default function Home() {
 			</Head>
 
 			<main>
+				<div id="portal">
+					<Portal n={1000} />
+				</div>
 				<div id="main">
 					<img src="/heroTop.svg" alt="" id="heroTop" />
 					<div id="hero">
@@ -65,6 +68,13 @@ export default function Home() {
 			</main>
 
 			<style jsx>{`
+				#portal {
+					position: absolute;
+					top: -5vh;
+					z-index: 0;
+					width: 100vw;
+					height: 100vh;
+				}
 				#main {
 					display: inline-grid;
 					width: 100%;

@@ -11,7 +11,7 @@ export default NextAuth({
 		GithubProvider({
 			clientId: process.env.GITHUB_ID,
 			clientSecret: process.env.GITHUB_SECRET,
-			scope: 'write:repo_hook,read:user',
+			scope: 'user, repo',
 		}),
 	],
 	callbacks: {
