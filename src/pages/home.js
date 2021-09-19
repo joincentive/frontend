@@ -14,10 +14,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
+			<div id="portal">
+				<Portal n={1000} />
+			</div>
 			<main>
-				<div id="portal">
-					<Portal n={1000} />
-				</div>
 				<div id="main">
 					<img src="/heroTop.svg" alt="" id="heroTop" />
 					<div id="hero">
@@ -70,6 +70,7 @@ export default function Home() {
 			<style jsx>{`
 				#portal {
 					position: absolute;
+					pointer-events: none;
 					top: -5vh;
 					z-index: 0;
 					width: 100vw;
@@ -80,6 +81,7 @@ export default function Home() {
 					width: 100%;
 					grid-template-columns: repeat(12, 1fr);
 					grid-auto-rows: minmax(75px, auto);
+					z-index: 5;
 				}
 				#generative {
 					grid-column: 1 / -1;
@@ -123,6 +125,7 @@ export default function Home() {
 				#projectsCards {
 					grid-column: 3 / 11;
 					grid-row: 7;
+					z-index: 50;
 				}
 
 				#bountyDescription {
@@ -136,6 +139,7 @@ export default function Home() {
 					grid-column: 4 / 9;
 					grid-row: 11;
 					margin-bottom: 10rem;
+					z-index: 50;
 				}
 			`}</style>
 		</div>

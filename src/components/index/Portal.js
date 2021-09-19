@@ -17,9 +17,12 @@ export default function Portal({ n }) {
 				/>
 			</Canvas>
 			<style jsx>{`
+				position: absolute;
+			
 				div {
-					width: 100%;
-					height: 100%;
+					width: 100vw;
+					height: 100vh;
+					z-index: -1;
 				}
 			`}</style>
 		</div>
