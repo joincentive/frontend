@@ -15,10 +15,10 @@ export default function Home() {
 			</Head>
 
 			<main>
+				<Generative />
 				<img src="/heroTop.svg" alt="" />
 				<Hero />
 				<Banner />
-				{/* <Generative /> */}
 				<LatestProjects />
 				<img src="/heroBottom.svg" alt="" />
 			</main>

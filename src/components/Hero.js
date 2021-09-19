@@ -19,7 +19,7 @@ const Hero = () => {
 					flex-direction: column;
 					justify-content: right;
 					margin-top: 0px;
-					z-index: 10;
+					// z-index: 10;
 				}
 				div > div {
 					width: 45%;
@@ -33,14 +33,14 @@ const Hero = () => {
 					font-size: 36px;
 					font-family: Righteous;
 					position: relative;
-					z-index: 10;
+					// z-index: 10;
 				}
 				p {
 					color: white;
 					position: relative;
 					font-size: 16px;
 					font-family: Overpass;
-					z-index: 10;
+					// z-index: 10;
 				}
 			`}</style>
 		</div>
