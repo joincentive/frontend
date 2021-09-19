@@ -1,9 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Generative from '../components/Generative'
-import Hero from '../components/hero'
-import LatestProjects from '../components/LatestProjects'
-import Banner from '../components/Banner'
 
 export default function Home() {
 	return (
@@ -30,21 +26,20 @@ export default function Home() {
 					<Image src="/ship.png" alt="" width="550" height="550" />
 				</div>
 				<Image id="blob" src="/blob.png" alt="" width="1720" height="300" />
-
-				<style jsx>
-					{`
-
-					#about{
+			</main>
+			<style jsx>
+				{`
+					#about {
 						display: flex;
 						flex-direction: row;
 						align-items: center;
 						margin-top: 6rem;
 						padding: 0rem 4rem;
-
+						overflow-y: hidden;
 					}
 			
-					div > div{
-						width 60vw;
+					div > div {
+						width: 60vw;
 						padding: 3rem ;	
 					}
 
@@ -52,18 +47,7 @@ export default function Home() {
 						width: 100%
 					}
 				`}
-				</style>
-			</main>
-
-			<footer>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					By the HTN Team
-				</a>
-			</footer>
+			</style>
 		</div>
 	)
 }
