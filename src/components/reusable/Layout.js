@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../components/Nav'
+import Nav from './Nav'
 import styled from 'styled-components'
 
 const LayoutContainer = styled.div`
@@ -12,7 +12,6 @@ const LayoutContainer = styled.div`
 const Layout = ({ children }) => {
 	return (
 		<LayoutContainer>
-			<Nav />
 			<main>{children}</main>
 		</LayoutContainer>
 	)
