@@ -113,7 +113,7 @@ const listings = () => {
 	console.log(listingsMap)
 	const [listing, setListing] = useState()
 	return (
-		<>
+		<div id="listings">
 			<div id="title">
 				<h1>What type of projects are you looking for?</h1>
 				<p>
@@ -130,7 +130,7 @@ const listings = () => {
 					}
 				`}
 			</style>
-		</>
+		</div>
 	)
 }
 
